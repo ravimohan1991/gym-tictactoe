@@ -1,6 +1,3 @@
-# gym-tictactoe
-An experiment with Reinforcement Learning and Open AI Gym
-
 gym-tictactoe
 ==============
 
@@ -26,10 +23,13 @@ INSTALLATION
 ==================================================================================================
 
 Assumption - I assume that you have installed the OpenAI Gym on your box and cloned this repository on the local machine. Now type
-* cd gym-tictactoe
-* sudo pip install -U setuptools
-* sudo pip install -e gym-tictactoe
 
+.. code:: shell
+
+	sudo pip install -U setuptools
+ 	sudo pip install -e gym-tictactoe
+
+.. code:: shell
 
 
 
@@ -37,8 +37,11 @@ USAGE
 ========
 It is quite simple to run the game. Just type 
 
-python playfile.py
+.. code:: shell
 
+	python playfile.py
+
+.. code:: shell
 
 
 
