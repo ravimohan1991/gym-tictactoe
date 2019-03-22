@@ -5,12 +5,12 @@ import logging
 
 logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
+# Change these values in an_agent.py too for experimentation
 EPSILON = 0.3
 ALPHA = 0.4
 
-an_agent = gym.make("tictactoe-anagent-v1") # AnAgent(EPSILON, ALPHA)  # The Agent plays with mark X
 env = gym.make("tictactoe-v1")  # TicTacToe(an_agent)
-an_agent.setRandomizer(env.np_random)
+
 
 logging.debug("+-------------------------------------------")
 logging.debug("| Game Agent Parameters:")

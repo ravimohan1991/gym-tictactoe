@@ -8,7 +8,7 @@ from gym.utils import seeding
 from gym.envs.classic_control import rendering
 from pyglet.window import mouse
 from array import *
-from gym_tictactoe.agent.an_agent import check_game_status
+from gym_tictactoe.agent.an_agent import AnAgent, check_game_status
 
 
 logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
@@ -38,7 +38,7 @@ class TicTacToe(gym.Env):
 
     """
 
-    def __init__(self, agent):
+    def __init__(self):
 
         self.action_space = [0, 1, 2, 3, 4, 5, 6, 7, 8]
         self.observation_space = spaces.Discrete(9)
@@ -57,9 +57,11 @@ class TicTacToe(gym.Env):
 
         self.dataCC = array('i', [-1, -1, -1, -1, -1, -1, -1, -1, -1]) # Game board
 
-        self.agent = agent
+        self.agent = AnAgent()
 
         self.seed()
+
+	self.agent.setRandomizer(self.np_random)
 
 
     def reset(self):

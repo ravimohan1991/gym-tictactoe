@@ -4,6 +4,6 @@ setup(name='gym_tictactoe',
       version='1.0',
       install_requires=['gym',
 			'pyglet',
-			'numpy'
+			'numpy',
 			]  # And any other dependencies tictactoe needs
 )

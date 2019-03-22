@@ -11,12 +11,13 @@ from multiprocessing import Pool
 from tempfile import NamedTemporaryFile
 from array import *
 
-import pandas as pd
 
 # Some default global values
+EPSILON = 0.3
+ALPHA = 0.4
 
 st_values = {}
-st_visits = defaultdict(lambda: 0) # Number of times we visited the state ?
+st_visits = defaultdict(lambda: 0) # Number of times we visited the state ? TODO: something wrong here
 
 logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
@@ -39,9 +40,9 @@ def best_val_indices(values, fn):
 
 
 class AnAgent(object):
-    def __init__(self, epsilon, alpha):
-        self.epsilon = epsilon
-        self.alpha = alpha
+    def __init__(self):
+        self.epsilon = EPSILON
+        self.alpha = ALPHA
 
     def act(self, state, ava_actions):
         return self.egreedy_policy(state, ava_actions)
