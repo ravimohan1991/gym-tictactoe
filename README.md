@@ -24,12 +24,10 @@ INSTALLATION
 
 Assumption - I assume that you have installed the OpenAI Gym on your box and cloned this repository on the local machine. Now type
 
-.. code:: shell
 
 	sudo pip install -U setuptools
  	sudo pip install -e gym-tictactoe
 
-.. code:: shell
 
 
 
@@ -37,11 +35,10 @@ USAGE
 ========
 It is quite simple to run the game. Just type 
 
-.. code:: shell
-
+	cd gym-tictactoe
 	python playfile.py
 
-.. code:: shell
+
 
 
 
