@@ -3,7 +3,7 @@ gym-tictactoe
 
 > [v1.0]
 
-An experiment with Reinforcement Learning and Open AI Gym
+An experiment with Reinforcement Learning and OpenAI Gym
 <br>
 ![Alt Text](/repofiles/screenshotalpha.png)
 

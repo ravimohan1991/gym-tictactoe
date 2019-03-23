@@ -61,7 +61,7 @@ class TicTacToe(gym.Env):
 
         self.seed()
 
-	self.agent.setRandomizer(self.np_random)
+        self.agent.setRandomizer(self.np_random)
 
 
     def reset(self):
